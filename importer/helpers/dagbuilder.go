@@ -72,6 +72,10 @@ type DagBuilderParams struct {
 	NoCopy bool
 }
 
+func (db *DagBuilderHelper) SetOffset(o uint64) {
+	db.offset = o
+}
+
 // New generates a new DagBuilderHelper from the given params and a given
 // chunker.Splitter as data source.
 func (dbp *DagBuilderParams) New(spl chunker.Splitter) (*DagBuilderHelper, error) {
